@@ -22,3 +22,9 @@ LinkedHashMap HashMap+双向链表，可保证写入顺序
 TreeMap 红黑树结构，按key排序  
 Hashtable HashMap方法上加synchronized  
 ConCurrentHashMap 线程安全HashMap  
+### Synchronized和ReentrantLock区别
+Sync是关键字，Lock是类  
+Sync自动加锁释放锁，Lock手动加锁释放锁，lock，unlock方法  
+Sync只支持非公平锁，Lock支持公平锁和非公平锁，构造器中设值TRUE，表示公平锁，使用AQS实现，包含state和queue两部分，queue为空，尝试获取锁，非空添加到queue中  
+Sync阻塞时无法中断，Lock阻塞时lockInterruptibly()可中断锁，也可以设置超时时间  
+Sync不能跨方法使用, Lock可以跨方法使用  
