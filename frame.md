@@ -27,3 +27,4 @@
       -- 这里的子查询可以利用覆盖索引，性能极高  
       SELECT id FROM t_order ORDER BY id LIMIT 1000000, 10  
   ) t2 ON t1.id = t2.id;  
+# 支付表结构及退款功能
