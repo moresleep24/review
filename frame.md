@@ -28,3 +28,5 @@
       SELECT id FROM t_order ORDER BY id LIMIT 1000000, 10  
   ) t2 ON t1.id = t2.id;  
 # 支付表结构及退款功能
+
+# 消息队列在系统中有什么应用
