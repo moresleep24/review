@@ -12,3 +12,5 @@
 ！在需要权限的接口上添加@preAuthorize(hasAuthority(queryUser))，若用户无此权限或权限为空，调用接口即报错  
 ！每个接口添加注解比较麻烦，可以统一配置，以接口地址作为权限标识，在SecurityFilterChain中的anyRequest().access(this::hasPathAuthority)  
 ！hasPathAuthority方法中会判断用户权限和当前接口的地址是否匹配，匹配就会返回AuthorzationDecision(true)对象
+# 深分页问题
+
